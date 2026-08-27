@@ -68,4 +68,4 @@ Or open the HTML files directly in a browser. Pages are static HTML / CSS / JS. 
 
 ## Brand
 
-Warm cream / charcoal / gold to match the official logo. Fraunces + Manrope.
+Futuristic-minimalist, 2026. Near-black canvas, white type, geometric sans (Outfit) + IBM Plex Mono labels. Logo gold used only as a thin accent (hairlines, one CTA, focus rings). Square / 2px radius. Not the Multispaces marketplace look.
