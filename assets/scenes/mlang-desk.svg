@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img">
+  <rect width="1200" height="900" fill="#1c1713"/>
+  <rect y="520" width="1200" height="380" fill="#241e18"/>
+  <rect x="80" y="480" width="1040" height="48" rx="6" fill="#4a3826"/>
+  <rect x="120" y="528" width="24" height="200" fill="#2e2418"/>
+  <rect x="1056" y="528" width="24" height="200" fill="#2e2418"/>
+  <rect x="200" y="400" width="140" height="80" rx="4" fill="#2a241e"/>
+  <rect x="180" y="476" width="180" height="12" fill="#c9b8a3"/>
+  <rect x="520" y="410" width="140" height="70" rx="4" fill="#2a241e"/>
+  <rect x="500" y="476" width="180" height="12" fill="#c9b8a3"/>
+  <rect x="840" y="400" width="140" height="80" rx="4" fill="#2a241e"/>
+  <rect x="820" y="476" width="180" height="12" fill="#c9b8a3"/>
+  <ellipse cx="420" cy="460" rx="22" ry="12" fill="#c8892d"/>
+  <rect x="400" y="430" width="40" height="30" rx="6" fill="#e4b25a"/>
+  <ellipse cx="700" cy="200" rx="180" ry="80" fill="#e4b25a" opacity="0.12"/>
+  <polygon points="640,40 760,40 730,140 670,140" fill="#e4b25a"/>
+  <line x1="700" y1="0" x2="700" y2="40" stroke="#c9b8a3" stroke-width="3"/>
+</svg>
