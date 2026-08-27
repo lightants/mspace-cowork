@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book a desk — MSpace Coworking</title>
+  <meta name="description" content="Reserve a desk at MSpace Coworking in M’lang. ₱50/hour, 10% off for students and teachers. Cashless — scan GCash to pay at checkout. No cash.">
+  <link rel="icon" type="image/png" href="assets/logo-official.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,650;1,9..144,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="nav">
+    <a class="nav-brand" href="index.html">
+      <span class="logo-square"><img src="assets/logo-official.png" alt="" width="44" height="44"></span>
+      <span class="nav-word"><strong>MSpace</strong><span>Coworking</span></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">Menu</button>
+    <nav id="nav-menu" class="nav-links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="index.html#visit">Visit</a>
+      <a href="conference.html">Conference</a>
+      <a class="nav-cta" href="book.html" aria-current="page">Book a desk</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div class="page-hero wrap" id="desk-hero">
+      <p class="eyebrow">Desk reservation</p>
+      <h1>Book a desk</h1>
+      <p class="lede">₱50 per hour. Choose Student or Teacher and 10% comes off automatically. Cashless — scan GCash to pay at checkout. No cash.</p>
+    </div>
+
+    <div class="wrap book-layout" id="desk-flow">
+      <form class="form-card" id="desk-form" novalidate>
+        <div class="form-grid">
+          <label>Date
+            <input id="desk-date" name="date" type="date" required>
+          </label>
+          <label>Role
+            <select id="desk-role" name="role" required>
+              <option value="" selected disabled>Select your role</option>
+              <option value="student">Student — 10% off</option>
+              <option value="teacher">Teacher — 10% off</option>
+              <option value="va">Virtual assistant</option>
+              <option value="freelancer">Freelancer</option>
+              <option value="startup">Startup</option>
+              <option value="entrepreneur">Entrepreneur</option>
+              <option value="other">Other</option>
+            </select>
+          </label>
+          <label>Start time
+            <select id="desk-start" name="start" required></select>
+          </label>
+          <label>End time
+            <select id="desk-end" name="end" required></select>
+          </label>
+          <p class="role-note full" id="desk-discount-note">Student / teacher 10% off is on. Your live total uses ₱45/hour (₱50 minus 10%).</p>
+          <label class="full">Name
+            <input id="desk-name" name="name" type="text" autocomplete="name" required placeholder="Your name">
+          </label>
+          <label>Mobile
+            <input id="desk-mobile" name="mobile" type="tel" autocomplete="tel" placeholder="Optional if you leave email">
+          </label>
+          <label>Email
+            <input id="desk-email" name="email" type="email" autocomplete="email" placeholder="Optional if you leave mobile">
+          </label>
+          <label class="full">Notes <span style="font-weight:500;color:var(--muted)">(optional)</span>
+            <textarea id="desk-notes" name="notes" placeholder="Anything we should know"></textarea>
+          </label>
+        </div>
+        <p class="hint">Posted hours are 9:00 AM–6:00 PM. We have not published which days of the week the floor is open.</p>
+        <p class="error" id="desk-error" hidden></p>
+        <div class="form-actions">
+          <button class="btn btn-gold" type="submit">Continue to GCash checkout</button>
+          <a class="btn btn-outline" href="conference.html">Need a conference instead?</a>
+        </div>
+      </form>
+
+      <aside>
+        <div class="receipt" id="desk-receipt" aria-live="polite">
+          <p class="eyebrow">Live total</p>
+          <h2>Desk rate</h2>
+          <p class="hint">₱50 × hours, then 10% off if you are a student or teacher.</p>
+          <div class="receipt-row"><dt>Hours</dt><dd id="r-hours">—</dd></div>
+          <div class="receipt-row"><dt>₱50 × hours</dt><dd id="r-sub">—</dd></div>
+          <div class="receipt-row"><dt>Student / teacher 10%</dt><dd id="r-off">—</dd></div>
+          <div class="receipt-total"><span>Total</span><strong id="r-total">₱0</strong></div>
+          <p class="demo-note"><strong>Pay by GCash at checkout.</strong> Cashless only — no cash. This form holds your reservation on this site; we don’t verify GCash automatically.</p>
+        </div>
+      </aside>
+    </div>
+
+    <div class="wrap checkout-wrap confirm-card" id="desk-confirm">
+      <p class="eyebrow">Checkout</p>
+      <h2>Scan GCash to pay</h2>
+      <p class="checkout-lede">Cashless only — scan GCash to pay. No cash.</p>
+      <div class="checkout-grid">
+        <figure class="gcash-poster">
+          <img src="assets/gcash-qr.png" width="1140" height="1500" alt="GCash Scan to Pay Here poster for merchant MSpace">
+        </figure>
+        <div class="checkout-pay">
+          <p class="eyebrow">Amount due</p>
+          <p class="checkout-amount" id="desk-due">₱0</p>
+          <p class="hint" id="desk-due-note">₱50/hour. Students and teachers get 10% off.</p>
+          <p class="pay-callout"><strong>Cashless only — scan GCash to pay. No cash.</strong> Use the official MSpace GCash poster. This page records a reservation; we do not verify GCash automatically.</p>
+          <p class="eyebrow checkout-res-label">Reservation</p>
+          <div id="desk-summary"></div>
+          <div class="form-actions" style="margin-top:1.1rem">
+            <a class="btn btn-gold" href="book.html">Book another desk</a>
+            <a class="btn btn-outline" href="index.html">Back home</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <p>MSpace Coworking · 2nd Floor, Aqua Verde Commercial Building, M’lang · Cashless, GCash only</p>
+      <p><a href="https://www.instagram.com/mspacemind/" target="_blank" rel="noopener">@mspacemind</a></p>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
